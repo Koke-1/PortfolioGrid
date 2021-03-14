@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/PortfolioGrid/static/css/main.30c5a460.chunk.css",
+    "main.js": "/PortfolioGrid/static/js/main.75cf014b.chunk.js",
+    "main.js.map": "/PortfolioGrid/static/js/main.75cf014b.chunk.js.map",
+    "runtime-main.js": "/PortfolioGrid/static/js/runtime-main.9320f41f.js",
+    "runtime-main.js.map": "/PortfolioGrid/static/js/runtime-main.9320f41f.js.map",
+    "static/js/2.6b08c3bb.chunk.js": "/PortfolioGrid/static/js/2.6b08c3bb.chunk.js",
+    "static/js/2.6b08c3bb.chunk.js.map": "/PortfolioGrid/static/js/2.6b08c3bb.chunk.js.map",
+    "index.html": "/PortfolioGrid/index.html",
+    "precache-manifest.9745b947d2b7b54c57d059454fd2930b.js": "/PortfolioGrid/precache-manifest.9745b947d2b7b54c57d059454fd2930b.js",
+    "service-worker.js": "/PortfolioGrid/service-worker.js",
+    "static/css/main.30c5a460.chunk.css.map": "/PortfolioGrid/static/css/main.30c5a460.chunk.css.map",
+    "static/js/2.6b08c3bb.chunk.js.LICENSE.txt": "/PortfolioGrid/static/js/2.6b08c3bb.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9320f41f.js",
+    "static/js/2.6b08c3bb.chunk.js",
+    "static/css/main.30c5a460.chunk.css",
+    "static/js/main.75cf014b.chunk.js"
+  ]
+}
