@@ -194,14 +194,14 @@ main .Content .Projects {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   -ms-grid-row: 1;
   -ms-grid-row-span: 3;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: content0;
-      grid-template-areas: "project0" "project1" "project2";
+      grid-template-areas: "project0" "project1" "project2" "project3" "project4";
 }
 
 main .Content .Projects .project0 {
@@ -228,6 +228,26 @@ main .Content .Projects .project2 {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: project2;
+  place-self: stretch;
+  color: white;
+  font-size: 30px;
+  text-align: center;
+}
+
+main .Content .Projects .project3 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: project3;
+  place-self: stretch;
+  color: white;
+  font-size: 30px;
+  text-align: center;
+}
+
+main .Content .Projects .project4 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: project4;
   place-self: stretch;
   color: white;
   font-size: 30px;

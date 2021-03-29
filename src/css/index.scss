@@ -82,12 +82,14 @@ main {
       }
     }
     .Projects {
-      @include gridStuff(grid, 1fr, 1fr 1fr 1fr);
+      @include gridStuff(grid, 1fr, 1fr 1fr 1fr 1fr 1fr);
       grid-area: content0;
       grid-template-areas:
         "project0"
         "project1"
-        "project2";
+        "project2"
+        "project3"
+        "project4";
       .project0 {
         @include tabs(project0, stretch, white, 30px);
         text-align: center;
@@ -98,6 +100,14 @@ main {
       }
       .project2 {
         @include tabs(project2, stretch, white, 30px);
+        text-align: center;
+      }
+      .project3 {
+        @include tabs(project3, stretch, white, 30px);
+        text-align: center;
+      }
+      .project4 {
+        @include tabs(project4, stretch, white, 30px);
         text-align: center;
       }
     }
