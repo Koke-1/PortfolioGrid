@@ -1,0 +1,468 @@
+@import url("https://fonts.googleapis.com/css2?family=Andika+New+Basic:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-family: "Andika New Basic", sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  grid-area: "root";
+}
+
+#root {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  grid-area: "root";
+}
+
+main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 0.075fr 1fr;
+      grid-template-rows: 0.075fr 1fr;
+      grid-template-areas: "navi" "stuff";
+}
+
+main nav {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: navi;
+      grid-template-areas: "nav1 nav2 nav3 nav4";
+  background: black;
+}
+
+main nav ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+}
+
+main nav ul li {
+  list-style: none;
+}
+
+main nav ul li button {
+  height: 100%;
+  width: 100%;
+  color: white;
+  background: black;
+  border-style: none;
+}
+
+main .Content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr 0.075fr;
+      grid-template-rows: 1fr 1fr 1fr 0.075fr;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: stuff;
+      grid-template-areas: "content0 content0 content0" "content0 content0 content0" "content0 content0 content0" "footer footer footer";
+  background-color: rgba(0, 0, 0, 0.876);
+}
+
+main .Content .Home {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: content0;
+      grid-template-areas: "name0 name0 name0" "job job job" "name1 name1 name1";
+}
+
+main .Content .Home .Home0 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: name0;
+  place-self: end center;
+  color: white;
+  font-size: 100px;
+  opacity: 0;
+  -webkit-animation: Intro 1s 0.5s forwards;
+          animation: Intro 1s 0.5s forwards;
+}
+
+@media screen and (max-width: 500px) {
+  main .Content .Home .Home0 {
+    font-size: 60px;
+  }
+}
+
+main .Content .Home .Home1 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: job;
+  place-self: center;
+  color: white;
+  font-size: 45px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  opacity: 0;
+  word-spacing: 5px;
+  text-align: center;
+  -webkit-animation: Intro1 1s 2s forwards;
+          animation: Intro1 1s 2s forwards;
+}
+
+@media screen and (max-width: 500px) {
+  main .Content .Home .Home1 {
+    font-size: 20px;
+  }
+}
+
+main .Content .Home .Home2 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: name1;
+  place-self: start center;
+  color: white;
+  font-size: 100px;
+  opacity: 0;
+  -webkit-animation: Intro 1s 0.5s forwards;
+          animation: Intro 1s 0.5s forwards;
+}
+
+@media screen and (max-width: 500px) {
+  main .Content .Home .Home2 {
+    font-size: 60px;
+  }
+}
+
+@-webkit-keyframes Intro {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes Intro {
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes Intro1 {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes Intro1 {
+  100% {
+    opacity: 1;
+  }
+}
+
+main .Content .Projects {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: content0;
+      grid-template-areas: "project0" "project1" "project2";
+}
+
+main .Content .Projects .project0 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: project0;
+  place-self: stretch;
+  color: white;
+  font-size: 30px;
+  text-align: center;
+}
+
+main .Content .Projects .project1 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: project1;
+  place-self: stretch;
+  color: white;
+  font-size: 30px;
+  text-align: center;
+}
+
+main .Content .Projects .project2 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: project2;
+  place-self: stretch;
+  color: white;
+  font-size: 30px;
+  text-align: center;
+}
+
+main .Content .Skills {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: content0;
+      grid-template-areas: "skill0 skill1 skill2" "skill3 skill4 skill5";
+}
+
+main .Content .Skills .html {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: skill0;
+  place-self: stretch;
+  color: white;
+  font-size: 30px;
+  background-color: red;
+}
+
+main .Content .Skills .html h1 {
+  text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+}
+
+@media screen and (max-width: 500px) {
+  main .Content .Skills .html h1 {
+    font-size: 20px;
+  }
+}
+
+main .Content .Skills .css {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: skill1;
+  place-self: left stretch;
+  color: white;
+  font-size: 30px;
+  background-color: blue;
+}
+
+main .Content .Skills .css h1 {
+  text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+}
+
+@media screen and (max-width: 500px) {
+  main .Content .Skills .css h1 {
+    font-size: 20px;
+  }
+}
+
+main .Content .Skills .js {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: skill2;
+  place-self: stretch;
+  color: white;
+  font-size: 30px;
+  background-color: gold;
+}
+
+main .Content .Skills .js h1 {
+  text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+}
+
+@media screen and (max-width: 500px) {
+  main .Content .Skills .js h1 {
+    font-size: 17px;
+  }
+}
+
+main .Content .Skills .react {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: skill3;
+  place-self: stretch;
+  color: white;
+  font-size: 30px;
+  background-color: #82ceeb;
+}
+
+main .Content .Skills .react h1 {
+  text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+}
+
+@media screen and (max-width: 500px) {
+  main .Content .Skills .react h1 {
+    font-size: 20px;
+  }
+}
+
+main .Content .Skills .sass {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: skill4;
+  place-self: stretch;
+  color: white;
+  font-size: 30px;
+  background-color: pink;
+}
+
+main .Content .Skills .sass h1 {
+  text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+}
+
+@media screen and (max-width: 500px) {
+  main .Content .Skills .sass h1 {
+    font-size: 20px;
+  }
+}
+
+main .Content .Skills .others {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: skill5;
+  place-self: center;
+  color: white;
+  font-size: 30px;
+}
+
+main .Content .Skills .others h1 {
+  text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+}
+
+@media screen and (max-width: 500px) {
+  main .Content .Skills .others h1 {
+    font-size: 20px;
+  }
+}
+
+main .Content .AboutMe {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: content0;
+      grid-template-areas: "AboutMe0" "AboutMe1";
+}
+
+main .Content .AboutMe .AboutMe0 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: AboutMe0;
+  place-self: center;
+  color: white;
+  font-size: 30px;
+}
+
+@media screen and (max-width: 500px) {
+  main .Content .AboutMe .AboutMe0 {
+    font-size: 17px;
+  }
+}
+
+main .Content .AboutMe .AboutMe1 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: AboutMe1;
+  place-self: start center;
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  word-spacing: 15px;
+  font-stretch: condensed;
+}
+
+@media screen and (max-width: 500px) {
+  main .Content .AboutMe .AboutMe1 {
+    font-size: 14px;
+  }
+}
+
+main .Content .Footer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 0.15fr 0.15fr 0.15fr;
+      grid-template-columns: 2fr 0.15fr 0.15fr 0.15fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: footer;
+      grid-template-areas: "nombre image0 image1 image2";
+}
+
+main .Content .Footer .Contact {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: nombre;
+  place-self: center;
+  color: white;
+  font-size: 25px;
+}
+
+main .Content .Footer .Test1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: image2;
+  place-self: center;
+  color: white;
+  font-size: 25px;
+}
+
+main .Content .Footer .Test2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: image1;
+  place-self: center;
+  color: white;
+  font-size: 25px;
+}
+
+main .Content .Footer .hover {
+  position: absolute;
+  font-size: 15px;
+  border-radius: 10px;
+  color: white;
+  background: black;
+  opacity: 0;
+}
+/*# sourceMappingURL=index.css.map */

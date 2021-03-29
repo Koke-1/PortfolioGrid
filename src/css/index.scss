@@ -1,0 +1,221 @@
+@import "mixin";
+@import "variables";
+@import "basic";
+main {
+  @include gridStuff(grid, 1fr, 0.075fr 1fr);
+  grid-template-areas: "navi" "stuff";
+  //   Nav
+  nav {
+    @include gridStuff(grid, 1fr, 1fr);
+    grid-area: navi;
+    grid-template-areas: "nav1 nav2 nav3 nav4";
+    background: black;
+    ul {
+      @include gridStuff(grid, 1fr 1fr 1fr 1fr, 1fr);
+      li {
+        list-style: none;
+
+        button {
+          height: 100%;
+          width: 100%;
+          color: white;
+          background: black;
+          border-style: none;
+        }
+      }
+    }
+  }
+  // Content
+  .Content {
+    @include gridStuff(grid, 1fr 1fr 1fr, 1fr 1fr 1fr 0.075fr);
+    grid-area: stuff;
+    grid-template-areas:
+      "content0 content0 content0"
+      "content0 content0 content0"
+      "content0 content0 content0"
+      "footer footer footer";
+    background-color: $blackColor;
+    // Home page
+    .Home {
+      @include gridStuff(grid, 1fr 1fr 1fr, 1fr 1fr 1fr);
+      grid-area: content0;
+      grid-template-areas:
+        "name0 name0 name0"
+        "job job job"
+        "name1 name1 name1";
+      .Home0 {
+        @include tabs(name0, end center, white, 100px);
+        opacity: 0;
+        animation: Intro 1s 0.5s forwards;
+        @media screen and (max-width: 500px) {
+          font-size: 60px;
+        }
+      }
+      .Home1 {
+        @include tabs(job, center, white, 45px);
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        opacity: 0;
+        word-spacing: 5px;
+        text-align: center;
+        animation: Intro1 1s 2s forwards;
+        @media screen and (max-width: 500px) {
+          font-size: 20px;
+        }
+      }
+      .Home2 {
+        @include tabs(name1, start center, white, 100px);
+        opacity: 0;
+        animation: Intro 1s 0.5s forwards;
+        @media screen and (max-width: 500px) {
+          font-size: 60px;
+        }
+      }
+      @keyframes Intro {
+        100% {
+          opacity: 1;
+        }
+      }
+      @keyframes Intro1 {
+        100% {
+          opacity: 1;
+        }
+      }
+    }
+    .Projects {
+      @include gridStuff(grid, 1fr, 1fr 1fr 1fr);
+      grid-area: content0;
+      grid-template-areas:
+        "project0"
+        "project1"
+        "project2";
+      .project0 {
+        @include tabs(project0, stretch, white, 30px);
+        text-align: center;
+      }
+      .project1 {
+        @include tabs(project1, stretch, white, 30px);
+        text-align: center;
+      }
+      .project2 {
+        @include tabs(project2, stretch, white, 30px);
+        text-align: center;
+      }
+    }
+
+    // Skills
+    .Skills {
+      @include gridStuff(grid, 1fr 1fr 1fr, 1fr 1fr);
+      grid-area: content0;
+      grid-template-areas:
+        "skill0 skill1 skill2"
+        "skill3 skill4 skill5";
+      .html {
+        @include tabs(skill0, stretch, white, 30px);
+        background-color: red;
+        h1 {
+          text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+          @media screen and (max-width: 500px) {
+            font-size: 20px;
+          }
+        }
+      }
+      .css {
+        @include tabs(skill1, left stretch, white, 30px);
+        background-color: blue;
+        h1 {
+          text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+          @media screen and (max-width: 500px) {
+            font-size: 20px;
+          }
+        }
+      }
+      .js {
+        @include tabs(skill2, stretch, white, 30px);
+        background-color: gold;
+        h1 {
+          text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+          @media screen and (max-width: 500px) {
+            font-size: 17px;
+          }
+        }
+      }
+      .react {
+        @include tabs(skill3, stretch, white, 30px);
+        background-color: rgb(130, 206, 235);
+        h1 {
+          text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+          @media screen and (max-width: 500px) {
+            font-size: 20px;
+          }
+        }
+      }
+      .sass {
+        @include tabs(skill4, stretch, white, 30px);
+        background-color: pink;
+        h1 {
+          text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+          @media screen and (max-width: 500px) {
+            font-size: 20px;
+          }
+        }
+      }
+      .others {
+        @include tabs(skill5, center, white, 30px);
+        h1 {
+          text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+          @media screen and (max-width: 500px) {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+
+    // AboutMe
+    .AboutMe {
+      @include gridStuff(grid, 1fr, 1fr 1fr);
+      grid-area: content0;
+      grid-template-areas:
+        "AboutMe0"
+        "AboutMe1";
+      .AboutMe0 {
+        @include tabs(AboutMe0, center, white, 30px);
+        @media screen and (max-width: 500px) {
+          font-size: 17px;
+        }
+      }
+      .AboutMe1 {
+        @include tabs(AboutMe1, start center, white, 25px);
+        text-align: center;
+        word-spacing: 15px;
+        font-stretch: condensed;
+        @media screen and (max-width: 500px) {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .Footer {
+      @include gridStuff(grid, 2fr 0.15fr 0.15fr 0.15fr, 1fr);
+      grid-area: footer;
+      grid-template-areas: "nombre image0 image1 image2";
+
+      .Contact {
+        @include tabs(nombre, center, white, 25px);
+      }
+      .Test1 {
+        @include tabs(image2, center, white, 25px);
+      }
+      .Test2 {
+        @include tabs(image1, center, white, 25px);
+      }
+      .hover {
+        position: absolute;
+        font-size: 15px;
+        border-radius: 10px;
+        color: white;
+        background: black;
+        opacity: 0;
+      }
+    }
+  }
+}

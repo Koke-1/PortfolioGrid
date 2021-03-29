@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Andika+New+Basic:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  font-family: "Andika New Basic", sans-serif;
+}
+body {
+  @include view;
+  @include gridStuff(grid, 1fr, 1fr);
+  grid-area: "root";
+}
+#root {
+  @include gridStuff(grid, 1fr, 1fr);
+  grid-area: "root";
+}

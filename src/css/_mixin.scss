@@ -1,0 +1,15 @@
+@mixin view {
+  height: 100vh;
+  width: 100vw;
+}
+@mixin gridStuff($display, $col, $row) {
+  display: $display;
+  grid-template-columns: $col;
+  grid-template-rows: $row;
+}
+@mixin tabs($gridA, $placeS, $color, $fontS) {
+  grid-area: $gridA;
+  place-self: $placeS;
+  color: $color;
+  font-size: $fontS;
+}
