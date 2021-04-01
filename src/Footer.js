@@ -36,7 +36,7 @@ export default function Footer() {
     }, [Hover2])
     return (
         <section className="Footer">
-            {Hover1 && <p className="hover" ref={info}>***</p> }
+            {Hover1 && <p className="hover" ref={info}>**********************</p> }
             {Hover2 && <p className="hover1" ref={info1} >12345</p> }
             <h2 className="Contact" >{footerInfo[0].Title}</h2>
             <a className="Test1" target="_blank"  href="https://github.com/Koke-1" ><img  src={footerInfo[0].Image[0].img}  /></a>
